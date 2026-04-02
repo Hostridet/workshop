@@ -36,6 +36,34 @@ void runTests(
   );
 
   _runTest(
+    'Ходьба с минимальным движением устройства (50 шагов)',
+    detect,
+    filePath: 'bin/utils/assets/hard_50.txt',
+    expectedSteps: 50,
+  );
+
+  _runTest(
+    'Ходьба с минимальным движением устройства (100 шагов)',
+    detect,
+    filePath: 'bin/utils/assets/hard_100.txt',
+    expectedSteps: 100,
+  );
+
+  _runTest(
+    'Ходьба с интенсивным движением руки (50 шагов)',
+    detect,
+    filePath: 'bin/utils/assets/intensive_50.txt',
+    expectedSteps: 50,
+  );
+
+  _runTest(
+    'Ходьба с интенсивным движением руки (100 шагов)',
+    detect,
+    filePath: 'bin/utils/assets/intensive_100.txt',
+    expectedSteps: 100,
+  );
+
+  _runTest(
     'Движение по лестнице с устройством в руке (50 шагов)',
     detect,
     filePath: 'bin/utils/assets/stairs_50.txt',
@@ -46,6 +74,20 @@ void runTests(
     'Вращение устройства',
     detect,
     filePath: 'bin/utils/assets/rotation.txt',
+    expectedSteps: 0,
+  );
+
+  _runTest(
+    'Покачивание устройства в руке',
+    detect,
+    filePath: 'bin/utils/assets/swaying.txt',
+    expectedSteps: 0,
+  );
+
+  _runTest(
+    'Движение вверх-вниз без перемещения',
+    detect,
+    filePath: 'bin/utils/assets/up_down.txt',
     expectedSteps: 0,
   );
 }
